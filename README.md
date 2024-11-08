@@ -1,6 +1,6 @@
 ## Repo Init ##
 ```bash
-repo init -u https://github.com/aosp-sunny/android_kernel_manifest.git -b master
+repo init -u https://github.com/cyberknight777/kernel_manifest.git -b cancunf
 ```
 ## Sync Source ##
 ```bash

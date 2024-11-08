@@ -3,24 +3,23 @@
   <remote name="aosp" 
           fetch="https://android.googlesource.com/" />
   <remote  name="github"
-    fetch="https://github.com/" />
+    fetch="ssh://git@github.com/" />
 
   <default revision="master-kernel-build-2021" remote="aosp" sync-j="4" />
 
-  <superproject name="kernel/superproject" remote="aosp"/>
+  <superproject name="kernel/superproject" remote="aosp" revision="common-android12-5.10" />
+
   <project path="build" name="kernel/build" />
   <project path="kernel/tests" name="kernel/tests" />
   <project path="kernel/configs" name="kernel/configs" />
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" />
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" />
+  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" remote="aosp" />
 
-  <!-- Sunny Kernel -->
-  <project path="kernel/msm-4.14" name="NetErnels/android_kernel_xiaomi_sunny" remote="github" revision="staging" >
-    <linkfile dest="build.config" src="build.config.sunny" />
+  <project path="kernel-5.10" name="cyberknight777/dragonheart_kernel_motorola_cancunf" remote="github" revision="android12-5.10" clone-depth="1" >
+    <linkfile dest="build.config" src="build.config.cancunf" />
   </project>
 
-  <!-- Eva GCC -->
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-elf" name="StatixOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-elf" remote="github" revision="14.0.0" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi" name="StatixOS/android_prebuilts_gcc_linux-x86_arm_arm-eabi" remote="github" revision="12.0.0" clone-depth="1" />
+  <project path="vendor" name="sarthakroy2002/kernel_motorola_cancunf-modules" remote="github" clone-depth="1" />
 
 </manifest>
