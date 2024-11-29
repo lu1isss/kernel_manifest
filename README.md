@@ -1,6 +1,6 @@
 ## Repo Init ##
 ```bash
-repo init -u https://github.com/Witcher-Projekt/kernel_manifest.git -b cancunf
+repo init -u https://github.com/Witcher-Projekt/kernel_manifest.git -b pickle
 ```
 ## Sync Source ##
 ```bash
